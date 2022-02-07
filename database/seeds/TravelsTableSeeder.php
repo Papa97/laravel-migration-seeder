@@ -17,11 +17,10 @@ class TravelsTableSeeder extends Seeder
         for($i = 0; $i < 100; $i++) {
 
             $travel = new Travel();
-            //$travel->price = $faker->numberBetween(1000, 3000);
-            // $travel->starting_date = $faker->date();
-             $travel->return_date = $faker->date();
-            // $travel->description = $faker->text(200);
-            // $travel->location = $faker->country();
+            $travel->price = $faker->numberBetween(1000, 3000);
+            $travel->starting_date = $faker->date();
+            $travel->return_date = $faker->date();
+            $travel->location = $faker->country();
             $travel->save();
         }
 
