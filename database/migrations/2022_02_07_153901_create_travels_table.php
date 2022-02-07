@@ -15,11 +15,10 @@ class CreateTravelsTable extends Migration
     {
         Schema::create('travels', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger("prize");
-            $table->date("starting_date");
-            $table->date("return_date");
-            $table->string("description", 300);
-            $table->string("location", 150);
+            $table->string('location', 150);
+            $table->date('starting_date');
+            $table->date('return_date');
+            $table->float('price',7,2);
             $table->timestamps();
         });
     }
